@@ -13,6 +13,7 @@ metadata:
     alb.ingress.kubernetes.io/target-type: instance
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 32080}]'
     alb.ingress.kubernetes.io/healthcheck-path:  /
+    alb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:ap-northeast-2:327066177061:certificate/c049234d-8e0e-4daa-9ab5-323e53aa61ee"
     alb.ingress.kubernetes.io/subnets: 'subnet-05c77d6e,subnet-872f58fc,subnet-c1947a8e,subnet-2d758d72'
 spec:
   ingressClassName: {{ .Values.ingress.className }}
@@ -31,14 +32,4 @@ spec:
                   number: 3000
           {{- end }}
     {{- end }}
-{{/*  {{- if .Values.ingress.tls }}*/}}
-{{/*  tls:*/}}
-{{/*    {{- range .Values.ingress.tls }}*/}}
-{{/*    - hosts:*/}}
-{{/*        {{- range .hosts }}*/}}
-{{/*        - {{ . }}*/}}
-{{/*        {{- end }}*/}}
-{{/*      secretName: {{ .secretName }}*/}}
-{{/*    {{- end }}*/}}
-{{/*  {{- end }}*/}}
 {{- end }}
