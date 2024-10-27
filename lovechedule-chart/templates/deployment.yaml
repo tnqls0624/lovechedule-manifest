@@ -27,7 +27,7 @@ spec:
         - name: {{ .container.name }}
           securityContext:
             {{- toYaml $.Values.securityContext | nindent 12 }}
-          image: "{{ .container.image }}:{{ .container.tag | default $.Chart.AppVersion }}"
+          image: "{{ .container.tag | default $.Chart.AppVersion }}"
           imagePullPolicy: {{ .imagePullPolicy }}
           ports:
             - name: http
