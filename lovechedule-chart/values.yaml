@@ -76,8 +76,8 @@ ingress:
   hosts:
     - host: api.lovechedule.com
       paths:
-        - path: /*
-          pathType: ImplementationSpecific
+        - path: /
+          pathType: Prefix
   tls:
     - hosts:
         - api.lovechedule.com
