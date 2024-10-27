@@ -16,7 +16,7 @@ deployments:
     container:
       name: app
       image: dktnqls0624/project
-      tag: "dktnqls0624/project:caa363b7193eaa72d9c7f9a067bc811463297402"
+      tag: "dktnqls0624/project:5d4cf236e69ae3aa2d8fbd2c5877f54c17d94c04"
       ports:
         name: http-internal
         port: 3000
